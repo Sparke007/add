@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=IN-MH1LPW114972;Database=amshopDb;user id=sa;password=M8`$`tek12;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models

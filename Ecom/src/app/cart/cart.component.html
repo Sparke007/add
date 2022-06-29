@@ -1,0 +1,12 @@
+<div class="subtotal" *ngIf="product.length > 0">
+  <p>Subtotal: ({{totalItem}} items)
+      <strong> {{grandTotal}}</strong></p>
+      <div class="subtotal_gift">
+          <input type="checkbox"/>
+         <p>This order contains a gift</p>
+      </div>
+
+
+      <!-- <button onclick="routerLink">Proceed to checkout</button> -->
+      <button routerLink="/addtocart">Proceed to chckout</button>
+</div>

@@ -1,0 +1,49 @@
+<div class="checkout_products" *ngIf="product.length !=0">
+
+  <div class="checkout_product" *ngFor="let p of product, let i= index">
+
+     <img src="{{p.imgsrc}}" alt="" class="checkout_product_img">
+     <div class="checkout_product_info">
+
+         <p class="checkout_product_title">
+          {{p.pname}}
+
+         </p>
+         <img src="https://cdn2.hubspot.net/hubfs/4567260/0_KZ8hBw7pQZFFt2Mt.png" alt="">
+         <p class="checkout_product_in_stock">In Stock</p>
+        <div class="checkout_product_gift">
+
+            <input type="checkbox">
+            <p>This is a gift</p>
+            <a routerLink="/" class="checkout_product_more"> Learn more</a>
+        </div>
+        <div class="checkout_options">
+          <div class="checkout_dropdown">
+            </div>
+            <a (click)="removeItem(p)"> Delete</a>
+        </div>
+
+     </div>
+     <div class="qantity-container">
+      <h4><p class="qty">Qty</p></h4>
+      <div class="quantity-button">
+
+        <button class="btn" id="plus" type="button" (click)="inc(p)"><i class="fa fa-plus"></i></button>
+        <span>{{p.quantity}}</span>
+        <button class="btn" id="minus" type="button" (click)="dec(p)"><i class="fa fa-minus"></i></button>
+       </div>
+    </div>
+  </div>
+
+  <div class="class-right-subtotal">
+  <app-cart></app-cart>
+</div>
+
+</div>
+
+<div class="" *ngIf="product.length == 0">
+  <h2>Your shopping basket is empty</h2>
+  <p>You have no items in your basket</p>
+  <button class="btn btn-warning" routerLink="/">shop now</button>
+</div>
+<br>
